@@ -1,0 +1,25 @@
+<input type="button" value="display table" (click)="getTable()">
+<input type="button" value="display list" (click)="getList()" >
+<input type="button" value="clear all" (click)="clearData()" >
+
+<div *ngIf="mytable">
+    <table border="1" style="border-collapse:collapsed">
+        <tr><th>empno</th><th>ename</th><th>sal</th><th>desig</th><th>bonus</th><th>total</th></tr>
+        <tr *ngFor="let emp of getTable()">
+           <td>{{ emp.empNo }}</td>
+           <td>{{ emp.ename }}</td>
+           <td>{{ emp.salary }}</td>
+           <td>{{ emp.desg }}</td>
+           <td>{{ 0.1*emp.salary }}</td>
+           <td>{{ 1.1*emp.salary }}</td>
+        </tr>
+     </table>
+</div>
+
+
+<div *ngIf="mylist">
+    <li *ngFor="let emp of getList() ">
+        <ul>{{ emp.empNo }}-->{{ emp.ename }}-->{{ emp.salary }}-->{{ emp.desg }}-->{{ 0.1*emp.salary }}-->{{ 1.1*emp.salary }}
+        </ul>
+    </li>
+</div>

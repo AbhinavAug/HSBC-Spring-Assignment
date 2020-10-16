@@ -1,0 +1,8 @@
+<table border="1" style="border-collapse:collapsed">
+      <tr><th>Name</th><th>Age</th><th>Gender</th></tr>
+      <tr *ngFor="let item of getAllPeople(); let i = index">
+         <td>{{item.name}}</td>
+         <td>{{ item.age}}</td>
+         <td>{{ item.gender}}</td>
+      </tr>
+   </table>

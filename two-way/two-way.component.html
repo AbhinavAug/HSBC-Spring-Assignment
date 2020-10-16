@@ -1,0 +1,12 @@
+OrderId<input type="text"   #myorder [(ngModel)]="orderId" ><br><br>
+Cust Name<input type="text" #myname [(ngModel)]="custName" ><br><br>
+Enter Billing Date<input type="text" #mybill [(ngModel)]="billingDate" ><br><br>
+Enter Shipping Date<input type="text" #myship [(ngModel)]="shippingDate" ><br><br>
+Order Total<input type="text" #mytotal [(ngModel)]="orderTotal" ><br><br>
+<input type="button" on-click="displayData(myorder.value,myname.value,mybill.value,myship.value,mytotal.value)"  value="display" ><br><br>
+Order id:{{orderId}}<br><br>
+Cust Name:{{custName}}<br><br>
+Billing Date:{{billingDate}}<br><br>
+Shipping Date:{{shippingDate}}<br><br>
+Order Total:{{orderTotal}}<br><br>
+
