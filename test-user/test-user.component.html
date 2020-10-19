@@ -1,0 +1,9 @@
+<form #myform="ngForm" (ngSubmit)="onsubmit(myform)" >
+  <input name="uname" placeholder="User Name" ngModel><br>
+  <input name="password" type="password" placeholder="Password" ngModel><br>
+  <input type="submit" value="submit" ><br>
+</form>
+<div *ngIf="checkvalid">
+  <h4>successful login</h4>
+</div>
+ 
